@@ -57,7 +57,7 @@
                         <input type="number"  name="cou_sec" ><br>
                         <br>
                         <label style="color: #fe965a;">จำนวนที่รับ(ต่อกลุ่ม)</label>
-                        <input type="text"  name="cou_secpergroup" ><label>คน</label>
+                        <input type="text"  name="cou_secpergroup" > <label style="color: #fe965a;" > คน</label>
                         <br>
                         <br>
                         <button style="color: white;" class="btn btn-success" type="submit" name="submit" value="submit">บันทึกข้อมูล</button>
