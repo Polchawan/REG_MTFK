@@ -109,7 +109,7 @@ include 'conn.php';
                 <br>
                 
                 <button style="color: white;" class="btn btn-success" type="submit" name="submit" value="submit">บันทึกข้อมูล</button>
-                <a href="Course_add.php" class="btn btn-danger">Cancel</a>
+                <a href="Emp_addForm.php" class="btn btn-danger">Cancel</a>
             </form>
 </div>
 
