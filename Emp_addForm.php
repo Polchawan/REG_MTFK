@@ -42,17 +42,17 @@ include 'conn.php';
     <div class="container py-5">
         <br>
         <div class="col-md-auto">
-            <h1 class="text-center" style="color: #fe965a;">เพิ่มข้อมูลนิสิต</h1><br>
+            <h1 class="text-center" style="color: #fe965a;">เพิ่มข้อมูลพนักงาน</h1><br>
         </div>
         <div class="row justify-content-md-center">
             <div class="col col-lg-2"></div>
             <div class="col-md-auto">
 
 
-            <form action="stu_add.php" method="post">
+            <form action="Emp_add.php" method="post">
 
-                <label style="color: #fe965a;">รหัสนิสิต</label>
-                <input type="text" name="user_id" required><br>
+                <label style="color: #fe965a;" >รหัส:</label>
+                <input type="text" name="user_id" maxlength="8" required><br>
                 <br>
                 <label style="color: #fe965a;">ชื่อ</label>
                 <input type="text" name="fname" required>
@@ -68,37 +68,43 @@ include 'conn.php';
                 </select>
 
                 <label style="color: #fe965a;">วัน/เดือน/ปีเกิด</label>
-                <input type="date" name="birth" required><br>
+                <input type="date" name="birth" min="1960-01-01" max="2001-01-01"required><br>
                 <br>
 
                 <label style="color: #fe965a;">คณะ</label>
-                <select name="faculty" require>
+                <select name="fac_id" require>
                 <?php $sql = "SELECT * FROM faculty";
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($result)): ?>
+
                 <option value="<?php echo $row['fac_id']; ?>">
                 <?php echo $row['fac_name']; ?></option>
+
                 <?php endwhile; ?>
                 </select>
 
-                <label style="color: #fe965a;">สาขา</label>
-                <select name="branch" required>
-                <?php $sql = "SELECT * FROM branch";
+                <label style="color: #fe965a;">rank </label>
+                <select name="rank" required>
+                <?php $sql = "SELECT * FROM rank";
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($result)): ?>
-                <option value="<?php echo $row['branch_id']; ?>">
-                <?php echo $row['branch_name']; ?></option>
+                <option value="<?php echo $row['ra_id']; ?>">
+                <?php echo $row['ra_name'];?></option>
                 <?php endwhile; ?>
                 </select>
 
+                <label style="color: #fe965a;">วันที่เริ่มทำงาน</label>
+                <input type="date" name="enroll" min="2022-01-01" required><br><br>
+                
+
                 <label style="color: #fe965a;">โทรศัพท์</label>
-                <input type="text" name="phone" required><br><br>
+                <input type="tel" name="phone" maxlength="10" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"required><br><br>
 
                 <label style="color: #fe965a;">email</label>
                 <input type="email" name="email" required>
-
-                <label style="color: #fe965a;">ที่อยู่</label>
-                <input type="text" name="address" required>
+                <br><br>
+                <label style="color: #fe965a;">ที่อยู่</label><br>
+                <input type="text"style="width:200px; height:80px;" name="address" required>
                 <br>
                 <br>
                 
