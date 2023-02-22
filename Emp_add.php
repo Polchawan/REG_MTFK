@@ -20,7 +20,7 @@ include 'conn.php';
     
 
     // Insert the data into the database
-    $sql = "INSERT INTO student (user_id, emp_fname, emp_lastname, emp_gender, emp_birth,emp_phone,ra_id,emp_enroll,emp_email,emp_address,fac_id) 
+    $sql = "INSERT INTO student (user_id, emp_fname, emp_lastname,emp_gender, emp_birth,emp_phone,ra_id,emp_enroll,emp_email,emp_address,fac_id) 
             VALUES ('$user_id', '$fname', '$lname', '$gender', '$birth', '$faculty', '$branch', '$phone', '$email', '$address', '0','4')";
     
     $result = mysqli_query($conn, $sql);
