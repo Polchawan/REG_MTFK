@@ -98,7 +98,7 @@ include 'conn.php';
                 
 
                 <label style="color: #fe965a;">โทรศัพท์</label>
-                <input type="tel" name="phone" maxlength="10" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"required><br><br>
+                <input type="text" name="phone" maxlength="10" pattern= "[0]{1}[0-9]{2}[0-9]{3}[0-9]{4}" required ><br><br>
 
                 <label style="color: #fe965a;">email</label>
                 <input type="email" name="email" required>
