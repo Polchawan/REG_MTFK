@@ -5,7 +5,7 @@ include 'conn.php';
     // Get the form data
     $cou_id = $_POST['cou_id'];
     $cou_name = $_POST['cou_name'];
-    $cou_num = $_POST['cou_num'];
+    $cou_num = $_POST['cou_num'];  
     $cou_sec = $_POST['cou_sec'];
     $cou_secper = $_POST['cou_secpergroup'];
 
