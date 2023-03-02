@@ -39,7 +39,7 @@
         <h1 class="text-center" style="color: #fe965a;">เพิ่มข้อมูลรายวิชา</h1><br>
         </div>
             
-            <div class="row justify-content-md-center">
+            <div class="row justify-content-md-center"> 
                 <div class="col col-lg-2"></div>
                 <div class="col-md-auto">
                     <form action="Course_addForm.php" method="post">
