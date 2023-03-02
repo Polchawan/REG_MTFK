@@ -4,6 +4,7 @@ include 'conn.php';
 <?php
     // Get the form data
     $user_id = $_POST['user_id'];
+    $password = $_POST['user_id'];
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $gender = $_POST['gender'];
@@ -17,8 +18,10 @@ include 'conn.php';
     // $fac_id = $_POST['fac']
 
     
-
-    // Insert the data into the database
+    $sql1 = "INSERT INTO user (user_id,password,ra_id) 
+            VALUES ('$user_id', '$password','$rank')";
+    $result1 = mysqli_query($conn, $sql1);
+    // Insert the data into the databaseuser_id	
     $sql = "INSERT INTO employee (user_id, emp_fname, emp_lname,emp_gender, emp_birth, emp_phone, ra_id, emp_enroll, emp_email, emp_address,fac_id) 
             VALUES ('$user_id', '$fname', '$lname', '$gender', '$birth','$phone', '$rank', '$enroll', '$email', '$address', '$fac_id')";
     $result = mysqli_query($conn, $sql);

@@ -78,7 +78,7 @@ include 'conn.php';
                 while ($row = mysqli_fetch_assoc($result)): ?>
 
                 <option value="<?php echo $row['fac_id']; ?>">
-                <?php echo $row['fac_name']; ?></option>
+                <?php echo $row['fac_name'];  ?></option>
 
                 <?php endwhile; ?>
                 </select>
