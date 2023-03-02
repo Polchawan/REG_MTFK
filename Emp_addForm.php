@@ -49,7 +49,7 @@ include 'conn.php';
             <div class="col-md-auto">
 
 
-            <form action="Emp_add.php" method="post">
+            <form action="Emp_add.php" method="post"> 
 
                 <label style="color: #fe965a;" >รหัส:</label>
                 <input type="text" name="user_id" maxlength="8" required><br>
